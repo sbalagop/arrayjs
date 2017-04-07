@@ -1,0 +1,30 @@
+{
+  "name": "arrayjs",
+  "version": "1.0.0",
+  "description": "Samples of important JavaScript array methods",
+  "main": "samples.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbalagop/arrayjs.git"
+  },
+  "keywords": [
+    "javascript",
+    "array",
+    "map",
+    "reduce",
+    "filter"
+  ],
+  "author": "Sivakumar Balagopalan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbalagop/arrayjs/issues"
+  },
+  "homepage": "https://github.com/sbalagop/arrayjs#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
