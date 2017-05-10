@@ -17,6 +17,9 @@
     "reduce",
     "filter"
   ],
+  "scripts" : {
+    "test": "mocha"
+  },
   "author": "Sivakumar Balagopalan",
   "license": "ISC",
   "bugs": {
