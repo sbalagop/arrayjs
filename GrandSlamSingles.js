@@ -102,3 +102,41 @@ module.exports.findMostConsecutiveWinner = (data) => {
 
 };
 
+/**
+ * Given a search string which is a space seperated keywords, 
+ * return the records which matches all keywords
+ * Example, "2016 Andy" should return all 2016 finals in which Andy played (either a winner or runner)
+ * Example, "2016 Andy Novak" should return all 2016 finals in which both Andy and Novak played.
+ */
+module.exports.search = (data, searchStr) => {
+    'use strict';
+    if (!searchStr || !searchStr.trim()) {
+        return;
+    }
+
+    var keywords = searchStr.split(' ');
+    // Filter the empty strings out :)
+    keywords = keywords.filter(keyword => keyword);
+
+    return data.filter((record) => {
+        // Search every keyword
+        return keywords.every((keyword) => {
+            // In each record
+            return Object.keys(record).find(k => {
+                // at least one field in the record matches
+                var res =  record[k].includes(keyword);
+                if(res) {
+                    console.log(` ${record[k]} : ${keyword}`);
+                }
+                return res;
+            });
+        });
+    });
+};
+
+// reduce
+// find
+// filter
+// map
+// Object.keys()
+// every

@@ -49,6 +49,26 @@ describe('samples', function() {
         });
     });
 
+    describe('#search', function() {
+        it('should return the records which match all the keywords', function() {
+            expect(GrandSlamSingles.search(data, '2016 Andy')).to.deep.equal([{
+                "year": "2016",
+                "tournament": "Wimbledon",
+                "winner": "Andy Murray",
+                "runner": "Milos Raonic"
+            }, {
+                "year": "2016",
+                "tournament": "French Open",
+                "winner": "Novak Djokovic",
+                "runner": "Andy Murray"
+            }, {
+                "year": "2016",
+                "tournament": "Australian Open",
+                "winner": "Novak Djokovic",
+                "runner": "Andy Murray"
+            }]);
+        });
+    });
 
 
 
