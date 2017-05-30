@@ -5,19 +5,19 @@ var data = require('./data.js');
 describe('samples', function() {
     'use strict';
 
-    describe('#findATournamentWinner', function() {
+    describe('#findAWinner', function() {
         it('should return "Roger Federer" for the year "2017" of "Australian Open"', function() {
-            expect(GrandSlamSingles.findATournamentWinner('2017', 'Australian Open', data)).to.equal('Roger Federer');
+            expect(GrandSlamSingles.findAWinner('2017', 'Australian Open', data)).to.equal('Roger Federer');
         });
     });
 
 
-    describe('#findAllTournamentWinners', function() {
+    describe('#findWinnersOfTheYear', function() {
         it('should return 4 tournaments and their winners for year 2016', function() {
-            expect(GrandSlamSingles.findAllTournamentWinners('2016', data)).to.have.lengthOf(4);
+            expect(GrandSlamSingles.findWinnersOfTheYear('2016', data)).to.have.lengthOf(4);
         });
         it('should return Stan Wawrinka(U.S. Open), Andy Murray(Wimbledon), French Open(French Open), Novak Djokovic(Australian Open) for year 2016', function() {
-            expect(GrandSlamSingles.findAllTournamentWinners('2016', data)).to.deep.equal([{
+            expect(GrandSlamSingles.findWinnersOfTheYear('2016', data)).to.deep.equal([{
                 "tournament": "U.S. Open",
                 "winner": "Stan Wawrinka"
             }, {
@@ -51,7 +51,7 @@ describe('samples', function() {
 
     describe('#search', function() {
         it('should return the records which match all the keywords', function() {
-            expect(GrandSlamSingles.search(data, '2016 Andy')).to.deep.equal([{
+            expect(GrandSlamSingles.search('2016 Andy', data)).to.deep.equal([{
                 "year": "2016",
                 "tournament": "Wimbledon",
                 "winner": "Andy Murray",
