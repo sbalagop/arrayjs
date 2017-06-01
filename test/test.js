@@ -33,22 +33,6 @@ describe('samples', function() {
         });
     });
 
-    describe('#findMostTournamentWinner', function() {
-        it('should return ["Roger Federer"] who won 18 grand slam titles', function() {
-            expect(GrandSlamSingles.findMostTournamentWinner(data)).to.deep.equal({ 'winners': ['Roger Federer'], 'maxWins': 18 });
-        });
-    });
-
-
-    describe('#findMostConsecutiveWinner', function() {
-        it('should return "Donald Budge" who won 6 consecutive grand slams', function() {
-            expect(GrandSlamSingles.findMostConsecutiveWinner(data)).to.deep.equal({
-                'winners': ['Donald Budge'],
-                'consecutiveWins': 6
-            });
-        });
-    });
-
     describe('#search', function() {
         it('should return the records which match all the keywords', function() {
             expect(GrandSlamSingles.search('2016 Andy', data)).to.deep.equal([{
@@ -70,19 +54,20 @@ describe('samples', function() {
         });
     });
 
+    describe('#findMostTournamentWinner', function() {
+        it('should return ["Roger Federer"] who won 18 grand slam titles', function() {
+            expect(GrandSlamSingles.findMostTournamentWinner(data)).to.deep.equal({ 'winners': ['Roger Federer'], 'maxWins': 18 });
+        });
+    });
 
+
+    describe('#findMostConsecutiveWinner', function() {
+        it('should return "Donald Budge" who won 6 consecutive grand slams', function() {
+            expect(GrandSlamSingles.findMostConsecutiveWinner(data)).to.deep.equal({
+                'winners': ['Donald Budge'],
+                'mostConsecutiveWins': 6
+            });
+        });
+    });
 
 });
-
-
-// Roger Federer has won 18 Major singles titles - the most by any man in history
-
-// Any tennis player who wins all the four grandslams in his career is said to have achieved the Career Slam.
-//all four of the major titles during their careers.     Fred Perry (age 26) – 1935 French Open
-// Don Budge (23) – 1938 French Open
-// Rod Laver* (24) – 1962 US Open
-// Roy Emerson* (27) – 1964 Wimbledon
-// Andre Agassi (29) – 1999 French Open
-// Roger Federer (27) – 2009 French Open
-// Rafeal Nadal (24) – 2010 US Open
-// Novak Djokovic (29) – 2016 French Open
