@@ -153,9 +153,8 @@ module.exports.findMostConsecutiveWinner = (data) => {
 
     // Delete the temporary member
     delete result.currentWins;
-
+    
     return result;
-
 };
 
 
