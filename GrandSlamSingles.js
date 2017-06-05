@@ -137,7 +137,7 @@ module.exports.findMostConsecutiveWinner = (data) => {
                     acc.mostConsecutiveWins = acc.currentWins;
                     acc.winners = [records[index - 1].winner];
                 } else if (acc.currentWins === acc.mostConsecutiveWins) {
-                    // Same most conseutive wins by another player, add this player.
+                    // Same most consecutive wins by another player, add this player.
                     acc.winners.push(records[index - 1].winner);
                 }
                 // Reset the currentWins
@@ -151,7 +151,7 @@ module.exports.findMostConsecutiveWinner = (data) => {
         'currentWins': 1 // Temporary consecutive win. currentWins is always <= mostConsecutiveWins
     });
 
-    // Delete the temporary memeber
+    // Delete the temporary member
     delete result.currentWins;
 
     return result;
