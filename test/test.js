@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var GrandSlamSingles = require('../GrandSlamSingles.js');
 var data = require('./data.js');
 
-describe('samples', function() {
+describe('GrandSlamSingles', function() {
     'use strict';
 
     describe('#findAWinner', function() {

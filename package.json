@@ -18,7 +18,7 @@
     "filter"
   ],
   "scripts" : {
-    "test": "mocha"
+    "test": "mocha test/test.js"
   },
   "author": "Sivakumar Balagopalan",
   "license": "ISC",
